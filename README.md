@@ -41,7 +41,6 @@ A modern, responsive news aggregation platform built with Next.js 14, TypeScript
 1. **Clone the repository**
    ```bash
    git clone https://github.com/AkshitKdhaka/SEO-optimize-NEWS-website.git
-   cd global-news-network
    ```
 
 2. **Install dependencies**
