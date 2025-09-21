@@ -39,35 +39,35 @@ A modern, responsive news aggregation platform built with Next.js 14, TypeScript
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/AkshitKdhaka/SEO-optimize-NEWS-website.git
    cd global-news-network
-   \`\`\`
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
    # or
    yarn install
-   \`\`\`
+   ```
 
 3. **Set up environment variables**
    
-   Create a \`.env.local\` file in the root directory:
-   \`\`\`env
+   Create a `.env.local` file in the root directory:
+   ```env
    # NewsAPI Configuration
    NEXT_PUBLIC_NEWS_API_KEY=your_newsapi_key_here
    
    # Optional: Server-side key (recommended for production)
    NEWS_API_KEY=your_newsapi_key_here
-   \`\`\`
+   ```
 
 4. **Run the development server**
-   \`\`\`bash
+   ```bash
    npm run dev
    # or
    yarn dev
-   \`\`\`
+   ```
 
 5. **Open your browser**
    
@@ -75,7 +75,7 @@ A modern, responsive news aggregation platform built with Next.js 14, TypeScript
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 global-news-network/
 ├── app/                          # Next.js App Router
 │   ├── api/                      # API Routes
@@ -109,7 +109,7 @@ global-news-network/
 ├── tailwind.config.ts            # Tailwind CSS configuration
 ├── next.config.mjs               # Next.js configuration
 └── package.json                  # Dependencies and scripts
-\`\`\`
+```
 
 ## 🔧 Configuration
 
@@ -117,15 +117,15 @@ global-news-network/
 
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
-| \`NEXT_PUBLIC_NEWS_API_KEY\` | NewsAPI key for client-side requests | Yes | - |
-| \`NEWS_API_KEY\` | NewsAPI key for server-side requests (recommended) | No | - |
+| `NEXT_PUBLIC_NEWS_API_KEY` | NewsAPI key for client-side requests | Yes | - |
+| `NEWS_API_KEY` | NewsAPI key for server-side requests (recommended) | No | - |
 
 ### NewsAPI Setup
 
 1. Visit [NewsAPI.org](https://newsapi.org)
 2. Sign up for a free account
 3. Get your API key from the dashboard
-4. Add it to your \`.env.local\` file
+4. Add it to your `.env.local` file
 
 **Note:** Free tier has limitations:
 - 1,000 requests per day
@@ -138,18 +138,18 @@ global-news-network/
 
 The project uses Tailwind CSS with custom color schemes defined in \`tailwind.config.ts\`:
 
-\`\`\`typescript
+```typescript
 colors: {
   primary: "#EF4F5F",  // Main brand color
   // ... other colors
 }
-\`\`\`
+```
 
 ### Adding New Categories
 
 To add new news categories, update the \`categories\` array in \`components/nav.tsx\`:
 
-\`\`\`typescript
+```typescript
 const categories = [
   // ... existing categories
   {
@@ -159,7 +159,7 @@ const categories = [
     slug: "your-category" as NewsCategory,
   },
 ]
-\`\`\`
+```
 
 Don't forget to update the \`NewsCategory\` type in \`types/news.ts\`.
 
@@ -182,7 +182,7 @@ The project can be deployed to any platform that supports Next.js:
 
 ### Build Commands
 
-\`\`\`bash
+```bash
 # Build for production
 npm run build
 
@@ -191,19 +191,19 @@ npm run start
 
 # Run linting
 npm run lint
-\`\`\`
+```
 
 ## 🧪 Development
 
 ### Available Scripts
 
-\`\`\`bash
+```bash
 npm run dev          # Start development server
 npm run build        # Build for production
 npm run start        # Start production server
 npm run lint         # Run ESLint
 npm run type-check   # Run TypeScript compiler check
-\`\`\`
+```
 
 ### Code Style
 
@@ -215,9 +215,9 @@ The project uses:
 ### Adding New Features
 
 1. **Create a new branch**
-   \`\`\`bash
+   ```bash
    git checkout -b feature/your-feature-name
-   \`\`\`
+   ```
 
 2. **Make your changes**
    - Follow existing code patterns
@@ -225,10 +225,10 @@ The project uses:
    - Update tests if applicable
 
 3. **Test your changes**
-   \`\`\`bash
+   ```bash
    npm run build
    npm run lint
-   \`\`\`
+   ```
 
 4. **Submit a pull request**
 
@@ -251,9 +251,9 @@ The project uses:
 ### Debug Mode
 
 Enable debug logging by adding to your \`.env.local\`:
-\`\`\`env
+```env
 NODE_ENV=development
-\`\`\`
+```
 
 ## 📊 Performance
 
@@ -338,7 +338,7 @@ If you encounter any issues or have questions:
 
 ---
 
-**Made with ❤️ by the Global News Network Team**
+**Made by the akd**
 
 *Star ⭐ this repository if you found it helpful!*
-\`\`\`
+```
