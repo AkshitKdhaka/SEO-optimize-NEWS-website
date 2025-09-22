@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Nunito } from "next/font/google"
+import { Nunito } from 'next/font/google'
 import "./globals.css"
 import { Footer } from "@/components/footer"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -16,20 +16,20 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Global News Network",
-    default: "Global News Network - Breaking News and Top Stories",
+    template: "%s | Global News Live",
+    default: "Global News Live - Breaking News and Top Stories",
   },
   description:
-    "Stay informed with the latest breaking news, top stories, and in-depth reporting from around the world. Global News Network delivers timely updates on politics, business, technology, entertainment, and more.",
-  keywords: "news, breaking news, world news, politics, business, technology, entertainment, sports, health, science",
-  authors: [{ name: "Global News Network", url: "https://globalnews.example.com/" }],
-  creator: "Global News Network",
-  publisher: "Global News Network",
+    "Stay informed with the latest breaking news, top stories, and in-depth reporting from around the world. Global News Live delivers timely updates on politics, business, technology, entertainment, and more.",
+  keywords: "news, breaking news, world news, politics, business, technology, entertainment, sports, health, science, global news live",
+  authors: [{ name: "Global News Live", url: "https://globalnews.live/" }],
+  creator: "Global News Live",
+  publisher: "Global News Live",
   formatDetection: {
     email: false,
     telephone: false,
   },
-  metadataBase: new URL("https://globalnews.example.com"),
+  metadataBase: new URL("https://globalnews.live"),
   alternates: {
     canonical: "/",
     languages: {
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
   },
   category: "News",
   openGraph: {
-    title: "Global News Network - Breaking News and Top Stories",
+    title: "Global News Live - Breaking News and Top Stories",
     description:
       "Stay informed with the latest breaking news, top stories, and in-depth reporting from around the world.",
-    url: "https://globalnews.example.com",
-    siteName: "Global News Network",
+    url: "https://globalnews.live",
+    siteName: "Global News Live",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Global News Network - Breaking News and Top Stories",
+        alt: "Global News Live - Breaking News and Top Stories",
       },
     ],
     locale: "en_US",
@@ -56,11 +56,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Global News Network - Breaking News and Top Stories",
+    title: "Global News Live - Breaking News and Top Stories",
     description: "Stay informed with the latest breaking news and top stories",
     images: ["/og-image.jpg"],
-    creator: "@GlobalNewsNet",
-    site: "@GlobalNewsNet",
+    creator: "@GlobalNewsLive",
+    site: "@GlobalNewsLive",
   },
   robots: {
     index: true,
@@ -76,7 +76,6 @@ export const metadata: Metadata = {
   verification: {
     google: "google-site-verification-code", // Replace with your actual verification code
   },
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -112,19 +111,19 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "NewsMediaOrganization",
-              name: "Global News Network",
-              url: "https://globalnews.example.com/",
-              logo: "https://globalnews.example.com/logo.png",
+              name: "Global News Live",
+              url: "https://globalnews.live/",
+              logo: "https://globalnews.live/logo.png",
               sameAs: [
-                "https://www.facebook.com/globalnewsnetwork",
-                "https://www.twitter.com/globalnewsnet",
-                "https://www.linkedin.com/company/global-news-network",
+                "https://www.facebook.com/globalnewslive",
+                "https://www.twitter.com/globalnewslive",
+                "https://www.linkedin.com/company/global-news-live",
               ],
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+1-555-555-5555",
                 contactType: "customer service",
-                email: "info@globalnews.example.com",
+                email: "info@globalnews.live",
                 availableLanguage: "English",
               },
               address: {
@@ -136,7 +135,7 @@ export default function RootLayout({
                 addressCountry: "US",
               },
               description:
-                "Global News Network provides breaking news, top stories, and in-depth reporting from around the world.",
+                "Global News Live provides breaking news, top stories, and in-depth reporting from around the world.",
             }),
           }}
         />

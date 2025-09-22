@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://globalnews.example.com/sitemap.xml",
+    sitemap: "https://globalnews.live/sitemap.xml",
   }
 }

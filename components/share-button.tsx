@@ -21,7 +21,7 @@ export function ShareButton({ title, slug }: ShareButtonProps) {
     setIsOpen(false)
   }
 
-  const shareUrl = `https://blog.geniuslabs.edu/blog/${slug}`
+  const shareUrl = `https://globalnews.live/article/${slug}`
   const encodedTitle = encodeURIComponent(title)
 
   const copyToClipboard = () => {
@@ -104,7 +104,7 @@ export function ShareButton({ title, slug }: ShareButtonProps) {
       {isOpen && (
         <div className="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 z-50 border">
           <div className="flex justify-between items-center mb-3">
-            <h4 className="text-sm font-medium">Share this blog</h4>
+            <h4 className="text-sm font-medium">Share this article</h4>
             <button
               onClick={closeDropdown}
               className="text-gray-500 hover:text-gray-700"

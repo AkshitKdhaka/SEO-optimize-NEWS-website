@@ -2,6 +2,8 @@
 
 A modern, responsive news aggregation platform built with Next.js 14, TypeScript, and Tailwind CSS. Stay informed with the latest breaking news, top stories, and in-depth reporting from around the world.
 
+🌐 **Live Demo:** [https://globalnews.live](https://globalnews.live)
+
 ![Global News Network](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
