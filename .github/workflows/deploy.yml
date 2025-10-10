@@ -1,0 +1,51 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 🧩 Step 1: Checkout the latest code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 🧱 Step 2: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 🧱 Step 3: Build the project
+      - name: Build project
+        run: npm run build
+
+      # 🧪 Step 4: Test SSH connection (debug step)
+      - name: Test SSH connection (debug)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            echo "✅ SSH connection successful!"
+            echo "Connected to host:" $(hostname)
+            echo "Running as user:" $(whoami)
+            echo "Current directory:" $(pwd)
+            echo "All good — ready to deploy."
+
+      # 🚀 Step 5: Deploy to AWS EC2 (only runs if above steps succeed)
+      - name: Deploy to AWS EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ubuntu/SEO-optimize-NEWS-website
+            git pull origin main
+            npm install --production
+            npm run build
+            pm2 restart globalnews || pm2 start npm --name "globalnews" -- start
