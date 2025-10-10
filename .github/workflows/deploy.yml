@@ -36,7 +36,22 @@ jobs:
             echo "Current directory:" $(pwd)
             echo "All good — ready to deploy."
 
-      # 🚀 Step 5: Deploy to AWS EC2 (only runs if above steps succeed)
+            
+      # 🧪 Step 5: Debug environment variables (debug step)
+      - name: Debug PATH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            echo "PATH: $PATH"
+            which node || echo "Node not found"
+            which npm || echo "NPM not found"
+            which pm2 || echo "PM2 not found"
+
+
+      # 🚀 Step 6: Deploy to AWS EC2 (only runs if above steps succeed)
       - name: Deploy to AWS EC2
         uses: appleboy/ssh-action@v1.0.3
         with:
