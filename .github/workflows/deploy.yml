@@ -46,6 +46,6 @@ jobs:
           script: |
             cd /home/ubuntu/SEO-optimize-NEWS-website
             git pull origin main
-            npm install --production
+            npm install 
             npm run build
-            pm2 restart globalnews || pm2 start npm --name "globalnews" -- start
+            pm2 restart globalnews
